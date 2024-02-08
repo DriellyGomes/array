@@ -1,5 +1,5 @@
 let times = ['Barcelona','Real Madrid', 'Athletic Bilbo', 'La Corumã', 'Atletic Madrid'];
-let frutas = [];
+let frutas = ['abacaxi', 'banana', 'morango', 'pera'];
  
 //modificar o valor de um item do array 
 times[0]='Betis';
@@ -31,6 +31,34 @@ times.forEach(element => {
     console.log(element);
 });
 
-for (let index = 0; index < times.length; index++) {
-    console.log(times[index]);  
+const lista = document.querySelector('.frutas');
+const listas = document.querySelector('.timess');
+lerArray(frutas, lista);
+lerArray(times, listas);
+
+// function lerArray( {    
+//     const lista = document.querySelector('.times'); /*ul*/
+//     times.array.forEach(element => {
+//         const linha = document.createElement ('li');
+//         linha.innerHTML = element;
+//         lista.appendChild(linha);
+//     });
+// }
+
+// function lerArrayFor () {
+//     const lista = document.querySelector('.times'); /* ul */
+//     for (let index = o; index < times.length; index++) {
+//         const linha = document.createElement('li');
+//         linha.innerHTML = time[index];
+//         lista.appendChild(linha);
+//     }
+// }
+
+function lerArray(array, lista) {
+    array.forEach(element => {
+        const linha = document.createElement('li');
+        linha.innerHTML = element;
+        lista.appendChild(linha);
+    });
 }
+  
